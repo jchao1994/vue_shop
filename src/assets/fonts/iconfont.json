@@ -6,11 +6,32 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "439124",
+      "name": "icon-shangpin",
+      "font_class": "icon-shangpin",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
       "icon_id": "1393475",
       "name": "avatar",
       "font_class": "avatar",
       "unicode": "e6a7",
       "unicode_decimal": 59047
+    },
+    {
+      "icon_id": "4428391",
+      "name": "icon-users",
+      "font_class": "icon-users",
+      "unicode": "e6cb",
+      "unicode_decimal": 59083
+    },
+    {
+      "icon_id": "4769058",
+      "name": "icon-danju-tianchong",
+      "font_class": "icon-danju-tianchong",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
     },
     {
       "icon_id": "6645135",
@@ -46,6 +67,20 @@
       "font_class": "bluetoothon",
       "unicode": "e698",
       "unicode_decimal": 59032
+    },
+    {
+      "icon_id": "9751830",
+      "name": "tijikongjian",
+      "font_class": "tijikongjian",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "9798054",
+      "name": "baobiao",
+      "font_class": "baobiao",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
     }
   ]
 }

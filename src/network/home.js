@@ -7,6 +7,9 @@ export function getMenuList() {
   })
 }
 
+
+
+// 获取Users页面数据
 export function getUserList(params) {
   return request({
     url: 'users',
@@ -54,3 +57,95 @@ export function removeUserById(id) {
     method: 'delete'
   })
 } 
+
+export function setRoleData() {
+  return request({
+    url: 'roles',
+    method: 'get'
+  })
+}
+
+export function saveRoleInfo(id, rid) {
+  return request({
+    url: `users/${id}/role`,
+    method: 'put',
+    data: {
+      rid
+    }
+  })
+}
+
+
+// 获取Rights页面数据
+export function getRightsListData(type='list') {
+  return request({
+    url: `rights/${type}`,
+    method: 'get'
+  })
+}
+
+
+// 获取Roles页面数据
+export function getRolesListData() {
+  return request({
+    url: 'roles',
+    method: 'get'
+  })
+}
+
+export function removeRightById(roleId, rightId) {
+  return request({
+    url: `roles/${roleId}/rights/${rightId}`,
+    method: 'delete'
+  })
+}
+
+export function getSetRightsData(type='tree') {
+  return request({
+    url: `rights/${type}`,
+    method: 'get'
+  })
+}
+
+export function allotRights(roleId, rids) {
+  return request({
+    url: `roles/${roleId}/rights`,
+    method: 'post',
+    data: {
+      rids
+    }
+  })
+}
+
+export function addRole(data) {
+  return request({
+    url: 'roles',
+    method: 'post',
+    data
+  })
+}
+
+export function showEditRole(id) {
+  return request({
+    url: `roles/${id}`,
+    method: 'get'
+  })
+}
+
+export function editRole(role) {
+  return request({
+    url: `roles/${role.roleId}`,
+    method: 'put',
+    data: {
+      roleName: role.roleName,
+      roleDesc: role.roleDesc
+    }
+  })
+}
+
+export function removeRoleById(id) {
+  return request({
+    url: `roles/${id}`,
+    method: 'delete'
+  })
+}

@@ -149,3 +149,45 @@ export function removeRoleById(id) {
     method: 'delete'
   })
 }
+
+
+// 获取Categories页面数据
+export function getCateListData(params) {
+  return request({
+    url: 'categories',
+    method: 'get',
+    params
+  })
+}
+
+export function addCate(data) {
+  return request({
+    url: 'categories',
+    method: 'post',
+    data
+  })
+}
+
+export function showEditCateData(id) {
+  return request({
+    url: `categories/${id}`,
+    method: 'get'
+  })
+}
+
+export function editCate(id, cat_name) {
+  return request({
+    url: `categories/${id}`,
+    method: 'put',
+    data: {
+      cat_name
+    }
+  })
+}
+
+export function removeCateById(id) {
+  return request({
+    url: `categories/${id}`,
+    method: 'delete'
+  })
+}

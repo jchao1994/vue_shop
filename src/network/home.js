@@ -191,3 +191,55 @@ export function removeCateById(id) {
     method: 'delete'
   })
 }
+
+
+// 获取Params页面数据
+export function getParamsListData(id, sel) {
+  return request({
+    url: `categories/${id}/attributes`,
+    method: 'get',
+    params: {
+      sel
+    }
+  })
+}
+
+export function addParams(id, attr_name, attr_sel) {
+  return request({
+    url: `categories/${id}/attributes`,
+    method: 'post',
+    data: {
+      attr_name,
+      attr_sel
+    }
+  })
+}
+
+export function showEditParamsData(id, attr_id, attr_sel) {
+  return request({
+    url: `categories/${id}/attributes/${attr_id}`,
+    method: 'get',
+    params: {
+      attr_sel
+    }
+  })
+}
+
+export function editParams(id, attr_id, attr_name, attr_sel, attr_vals) {
+  return request({
+    url: `categories/${id}/attributes/${attr_id}`,
+    method: 'put',
+    data: {
+      attr_name,
+      attr_sel,
+      attr_vals
+    }
+  })
+}
+
+export function removeParamsById(id, attr_id) {
+  return request({
+    url: `categories/${id}/attributes/${attr_id}`,
+    method: 'delete'
+  })
+}

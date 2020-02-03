@@ -243,3 +243,67 @@ export function removeParamsById(id, attr_id) {
     method: 'delete'
   })
 }
+
+
+// 获取Goods页面数据
+export function getGoodsListData(params) {
+  return request({
+    url: 'goods',
+    method: 'get',
+    params
+  })
+}
+
+export function removeGoodsById(id) {
+  return request({
+    url: `goods/${id}`,
+    method: 'delete'
+  })
+}
+
+
+// 获取AddGoods页面数据
+export function addGoods(data) {
+  return request({
+    url: 'goods',
+    method: 'post',
+    data
+  })
+}
+
+
+// 获取EditGoods页面数据
+export function getGoodsInfoData(id) {
+  return request({
+    url: `goods/${id}`,
+    method: 'get'
+  })
+}
+
+export function editGoods(id, data) {
+  return request({
+    url: `goods/${id}`,
+    method: 'put',
+    data
+  })
+}
+
+export function editPics(id, pics) {
+  return request({
+    url: `goods/${id}/pics`,
+    method: 'put',
+    data: {
+      pics
+    }
+  })
+}
+
+export function editAttrs(id, attrs) {
+  return request({
+    url: `goods/${id}/attributes`,
+    method: 'put',
+    data: {
+      attrs
+    }
+  })
+}

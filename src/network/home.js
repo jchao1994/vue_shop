@@ -324,3 +324,12 @@ export function getlogisticsInfoData(id) {
     method: 'get'
   })
 }
+
+
+// 获取Reports页面数据
+export function getReportsData() {
+  return request({
+    url: 'reports/type/1',
+    method: 'get'
+  })
+}

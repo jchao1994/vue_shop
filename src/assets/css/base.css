@@ -81,3 +81,13 @@ a {
 .ql-editor {
   min-height: 300px;
 }
+
+.el-cascader__dropdown {
+  top: 100px !important;
+  bottom: 100px;
+  overflow-y: scroll;
+}
+
+.el-scrollbar__bar {
+  display: none;
+}

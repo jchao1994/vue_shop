@@ -307,3 +307,20 @@ export function editAttrs(id, attrs) {
     }
   })
 }
+
+
+// 获取Orders页面数据
+export function getOrdersListData(params) {
+  return request({
+    url: 'orders',
+    method: 'get',
+    params
+  })
+}
+
+export function getlogisticsInfoData(id) {
+  return request({
+    url: `kuaidi/${id}`,
+    method: 'get'
+  })
+}

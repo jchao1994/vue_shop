@@ -12,6 +12,7 @@ const Params = () => import('views/home/childComps/Params')
 const Goods = () => import('views/home/childComps/Goods')
 const AddGoods = () => import('views/home/childComps/AddGoods')
 const EditGoods = () => import('views/home/childComps/EditGoods')
+const Orders = () => import('views/home/childComps/Orders')
 
 Vue.use(VueRouter)
   
@@ -62,9 +63,14 @@ const routes = [
         component: AddGoods
       },
       {
+        // URL中不显示参数，但是一旦刷新参数就会消失
         name: 'EditGoods',
         path: '/goods/edit',
         component: EditGoods
+      },
+      {
+        path: '/orders',
+        component: Orders
       }
     ]
   }

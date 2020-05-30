@@ -229,7 +229,6 @@ export default {
       );
       // 3.调用数组的splice方法，把图片信息对象从pics数组中移除
       this.addGoodsForm.pics.splice(fileIndex, 1);
-      console.log(this.addGoodsForm);
     },
     // 监听图片上传成功的事件
     handleSuccess(response) {

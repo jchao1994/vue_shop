@@ -48,7 +48,7 @@
                   </el-col>
                   <el-col :span="18">
                     <el-tag
-                      v-for="(item3, index3) in item2.children"
+                      v-for="item3 in item2.children"
                       :key="item3.id"
                       type="warning"
                       closable
@@ -343,7 +343,6 @@ export default {
           cancelButtonText: '取消',
           type: 'warning'
         }).catch(err => err);
-      console.log(removeRoleConfirm)
       if (removeRoleConfirm !== 'confirm') {
         this.$message.info("已取消删除！");
       } else {

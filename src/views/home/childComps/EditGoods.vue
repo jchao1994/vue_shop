@@ -194,7 +194,6 @@ export default {
           item.name = `第${index + 1}张图片`;
           item.url = item.pics_mid_url;
         });
-        console.log(this.editGoodsForm);
       }
     },
     async getCateList() {
@@ -232,7 +231,6 @@ export default {
         url: response.data.url
       };
       this.editGoodsForm.pics.push(fileInfo);
-      console.log(this.editGoodsForm);
     },
     editGoods() {
       this.$refs.editGoodsFormRef.validate(async valid => {

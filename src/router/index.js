@@ -16,7 +16,7 @@ const Orders = () => import('views/home/childComps/Orders')
 const Reports = () => import('views/home/childComps/Reports')
 
 Vue.use(VueRouter)
-  
+
 const routes = [
   {
     path: '/',
